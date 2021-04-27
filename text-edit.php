@@ -17,7 +17,7 @@ file_put_contents($filename,$_REQUEST['file_content']);
 <div contenteditable id="file_content" style="white-space: pre; overflow: scroll; border: 1px solid black; min-height: 100px;"><?=htmlentities(file_get_contents($filename))?></div>
 <textarea hidden name="file_content" id="textarea_to_send"></textarea>
 <script>function sync_to_send(){
-textarea_to_send.innerText=file_content.innerText
+textarea_to_send.textContent=file_content.innerText
 }</script>
 
 </form>
