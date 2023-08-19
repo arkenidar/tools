@@ -1,7 +1,7 @@
 <?php
 
 // file for passwords
-include "secrets.php";
+include "/var/www/secrets/secrets--tools-app.php";
 if(!isset($secret_password)) die("error: missing a secrets.php file!");
 
 // session variable for login/logout from login/logout form
@@ -21,6 +21,7 @@ if($_REQUEST["submit"]=="logout"){
 <!-- login/logout form -->
 Status: <?=$_SESSION["loggedin"]?"logged in":"logged out"?>
 <form action="" method="post">
+    <input type="text" name="tools_app_user_name">
     <input type="password" name="passwd" size="7"> <br>
     <input type="submit" value="login" name="submit">
     <input type="submit" value="logout" name="submit">
