@@ -1,4 +1,5 @@
-<?php session_start(); $_SESSION["loggedin"] or die("error: you aren't authorized!\n"); ?>
+<?php session_start();
+$_SESSION["loggedin"] or die("error: you aren't authorized!\n"); ?>
 <!doctype html>
 <title>upload</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,4 +18,4 @@ $temp = $_FILES["file"]["tmp_name"];
 $name = $_FILES["file"]["name"];
 move_uploaded_file($temp, $name) or print("move_uploaded_file() error<br>\n");
 ?>
-<img src="<?=$name?>">
+<img src="<?= $name ?>">

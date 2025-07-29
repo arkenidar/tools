@@ -6,9 +6,9 @@ $dir = explode('?', $_SERVER['REQUEST_URI'])[0];
 <?php
 
 print("<ul>\n");
-foreach ( scandir('.') as $entry ){
-    if($entry[0]==".") continue;
-    if($entry=="index.php") continue;
+foreach (scandir('.') as $entry) {
+    if ($entry[0] == ".") continue;
+    if ($entry == "index.php") continue;
 
     print("<li><a href='$entry' target='_blank' >$entry</a></li>\n");
 }
