@@ -1,0 +1,2 @@
+@disallow: protected.php;secrets.php
+@allow: *.php;*.allow
