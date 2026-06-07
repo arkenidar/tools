@@ -21,7 +21,7 @@ if (in_array($filename, $valid_filenames)) {
 } else {
 
     // as HTML text
-    function expose($filename)
+    function expose(string $filename)
     { // $filename is code-injection safe (being used only from safe foreach)
         echo "// <a href='?filename=$filename' >$filename</a>\n";
         echo htmlspecialchars(file_get_contents($filename));
